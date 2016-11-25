@@ -16,3 +16,7 @@ echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 5. `config checkout`
 
 Source: [The best way to store your dotfiles: A bare Git repository](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/)
+
+To safely delete `~/README.md` locally, run `dotfiles update-index --assume-unchanged README.md`
+
+If you need to update `README.md`, run `dotfiles update-index --no-assume-unchanged README.md`
