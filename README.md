@@ -10,7 +10,7 @@ echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 ### Installing to a new computer
 1. `alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME`
-2. `echo ".dotfiles" >> .gitignore
+2. `echo ".dotfiles" >> .gitignore`
 3. `git clone --bare https://github.com/michaeljdeeb/dotfiles.git $HOME/.dotfiles`
 4. `alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME`
 5. `config checkout`
