@@ -22,21 +22,21 @@ If you need to update `README.md`, run `dotfiles update-index --no-assume-unchan
 
 ## Using Submodules
 
-#### Add a submodule
+### Add a submodule
 For example, installing [vim-airline](https://github.com/vim-airline/vim-airline):
 ```bash
 cd ~/.vim/bundle
 dotfiles submodule add https://github.com/vim-airline/vim-airline
 ```
 
-#### Update a submodule
+### Update a submodule
 For example, upating [vim-airline](https://github.com/vim-airline/vim-airline):
 ```bash
 cd ~/.vim/bundle/vim-airline
 dotfiles pull
 ```
 
-#### Remove a submodule
+### Remove a submodule
 For example, removing [vim-airline](https://github.com/vim-airline/vim-airline):
 ```bash
 cd ~/.vim/bundle
