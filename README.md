@@ -18,5 +18,28 @@ echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 Source: [The best way to store your dotfiles: A bare Git repository](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/)
 
 To safely delete `~/README.md` locally, run `dotfiles update-index --assume-unchanged README.md`
-
 If you need to update `README.md`, run `dotfiles update-index --no-assume-unchanged README.md`
+
+## Using Submodules
+
+#### Add a submodule
+For example, installing [vim-airline](https://github.com/vim-airline/vim-airline):
+```bash
+cd ~/.vim/bundle
+dotfiles submodule add https://github.com/vim-airline/vim-airline
+```
+
+#### Update a submodule
+For example, upating [vim-airline](https://github.com/vim-airline/vim-airline):
+```bash
+cd ~/.vim/bundle/vim-airline
+dotfiles pull
+```
+
+#### Remove a submodule
+For example, removing [vim-airline](https://github.com/vim-airline/vim-airline):
+```bash
+cd ~/.vim/bundle
+dotfiles submodule deinit -f vim-airline
+dotfiles rm -rf vim-airline
+```
