@@ -3,6 +3,11 @@
 	" ~/.vim/:
 		" ~/.vim/colors/
 
+" Running pathogen from a non-default directory
+filetype off
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 set t_Co=256        " Enable 256-colors
 if (has("termguicolors"))
   set termguicolors	" Enables 24-bit color depth (requires compatible terminal/vim 8+)
