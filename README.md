@@ -36,6 +36,11 @@ cd ~/.vim/bundle/vim-airline
 dotfiles pull
 ```
 
+### Updating all submodules
+```bash
+dofiles submodule update --recursive --remote
+```
+
 ### Remove a submodule
 For example, removing [vim-airline](https://github.com/vim-airline/vim-airline):
 ```bash

@@ -42,6 +42,8 @@ set showmatch                   " When creating a new bracket pair, the cursor w
 set foldenable                  " Enable folding
 "set foldmethod=indent          " Fold lines with the same level of indentation
 set wrap                        " Wrap lines longer than the window
+set linebreak                   " Wrap lines in sensible places
+set breakindent                 " Indent wrapped lines to match the beginning of the line
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme & Color Depth
@@ -61,6 +63,7 @@ if &term =~# '^screen'
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
+set t_ut=                       " Disable BCE for tmux
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Plug-in Configurations
