@@ -12,6 +12,9 @@ filetype indent on              " Enables file type detection for syntax highlig
                                 " ~/vim/indent/<language>.vim
 set history=1000
 set undofile                    " Persistent log of undos after opening/closing
+set undodir=~/.vim/.un//        " Centralize undo files (.un) // means complete path will be built here based on file location
+set directory=~/.vim/.swp//     " Centralize swap files
+set backupdir=~/.vim/.backup//  " Centralize backup files (used before overwriting)
 set scrolloff=3                 " Show x lines above the cursor when file is scrollable
 set visualbell                  " Stops beeps for incorrect input
 set modelines=0                 " Prevents modeline security vulnerability
@@ -44,6 +47,7 @@ set foldenable                  " Enable folding
 set wrap                        " Wrap lines longer than the window
 set linebreak                   " Wrap lines in sensible places
 set breakindent                 " Indent wrapped lines to match the beginning of the line
+set splitbelow                  " Helps preview window be placed below current window
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme & Color Depth
@@ -78,6 +82,7 @@ let g:ale_sign_warning = '⚠'                   " Custom warning sign
 let g:ale_linters = {
 \  'javascript': ['eslint'],
 \}
+let g:ycm_autoclose_preview_window_after_completion = 1 " Close preview window when not in use
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Remappings
