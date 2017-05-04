@@ -70,7 +70,14 @@ set t_ut=                       " Disable BCE for tmux
 """"""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_powerline_fonts = 1             " Tell airline to use powerline symbols
 let g:airline#extensions#branch#enabled = 1   " Show git branch in airline
-let NERDTreeShowHidden=1                      " Show hidden files in NERDTree
+let NERDTreeShowHidden = 1                    " Show hidden files in NERDTree
+let g:ale_sign_column_always = 1              " Keep sign gutter always open
+let g:ale_sign_error = '⨉'                     " Custom error sign
+let g:ale_sign_warning = '⚠'                   " Custom warning sign
+" Only lint using eslint
+let g:ale_linters = {
+\  'javascript': ['eslint'],
+\}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Remappings
