@@ -7,9 +7,10 @@ execute pathogen#infect()
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible                " Turns off compatible mode for when not running from ~/.vimrc    
-filetype indent on              " Enables file type detection for syntax highlighting and 
+filetype indent plugin on       " Enables file type detection for syntax highlighting and 
                                 " allows language specific indentation at
                                 " ~/vim/indent/<language>.vim
+                                " plugin is required for NERDcommenter
 set history=1000
 set undofile                    " Persistent log of undos after opening/closing
 set undodir=~/.vim/.un//        " Centralize undo files (.un) // means complete path will be built here based on file location
@@ -43,7 +44,7 @@ set hlsearch                    " Highlight all matches in the file
 set ignorecase smartcase        " Searches are case-sensitive if they contain an upper-case letter
 set showmatch                   " When creating a new bracket pair, the cursor will flash the matching one
 set foldenable                  " Enable folding
-"set foldmethod=indent          " Fold lines with the same level of indentation
+" set foldmethod=indent          " Fold lines with the same level of indentation
 set wrap                        " Wrap lines longer than the window
 set linebreak                   " Wrap lines in sensible places
 set breakindent                 " Indent wrapped lines to match the beginning of the line
@@ -56,18 +57,22 @@ syntax enable                   " Syntax highlighting
 set cursorline                  " Highlights current line
 " Highlight the 100th & up character of the line
 let &colorcolumn=join(range(101,999),",") 
-colorscheme base16-oceanicnext
-set t_Co=256                    " Enable 256-color depth
+" set t_Co=256                    " Enable 256-color depth
+
 " Enables 24-bit color depth (requires compatible terminal/vim 8+)
-if (has("termguicolors"))
-  set termguicolors	
-endif
+" if (has("termguicolors"))
+"  set termguicolors	
+" endif
 " Required for 24-bit color tmux
-if &term =~# '^screen'
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
-set t_ut=                       " Disable BCE for tmux
+" if &term =~# '^screen'
+"   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" endif
+" set t_ut=                       " Disable BCE for tmux
+let g:solarized_termcolors=16
+let g:solarized_contrast='high'
+set background=dark
+colorscheme solarized
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Plug-in Configurations
@@ -75,13 +80,16 @@ set t_ut=                       " Disable BCE for tmux
 let g:airline_powerline_fonts = 1             " Tell airline to use powerline symbols
 let g:airline#extensions#branch#enabled = 1   " Show git branch in airline
 let NERDTreeShowHidden = 1                    " Show hidden files in NERDTree
+let NERDTreeMinimalUI = 1                     " Remove Press ? for help in NERDTree
+let g:NERDTreeShowIgnoredStatus = 1           " Mark .gitignore files as such (may slowdown vim?)
+" Makes multi-line comments start with /** per Airbnb style guide
+let g:NERDCustomDelimiters = {'javascript': {'left': '//', 'leftAlt': '/**', 'rightAlt': '*/'}} 
+let g:NERDSpaceDelims = 1                     " One space before comment per Airbnb style guide
 let g:ale_sign_column_always = 1              " Keep sign gutter always open
-let g:ale_sign_error = '⨉'                     " Custom error sign
-let g:ale_sign_warning = '⚠'                   " Custom warning sign
+let g:ale_sign_error = '⨉'                    " Custom error sign
+let g:ale_sign_warning = '⚠'                  " Custom warning sign
 " Only lint using eslint
-let g:ale_linters = {
-\  'javascript': ['eslint'],
-\}
+let g:ale_linters = {'javascript': ['eslint']}
 let g:ycm_autoclose_preview_window_after_completion = 1 " Close preview window when not in use
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,15 +117,21 @@ nnoremap k gk
 nnoremap ; :
 " Use jj to exit insert mode
 inoremap jj <esc>
+" Toggle NERDTree
+map <C-\> :NERDTreeToggle<CR>
+" In normal mode, // will toggle the comment of the current line
+" This also works to uncomment multi-line comments using any line
+nmap // <Leader>c<Space>
+" In visual mode, // will comment out selected lines with pretty formatting
+vmap // <Leader>cs
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Auto-Commands
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Save files when vim loses focus
+" Save files when vim loses focus (this might not work with tmux)
 autocmd FocusLost * :wa    
-" Open NERDTree automatically
-autocmd vimenter * NERDTree 
-" Place the cursor in the main window instead of NERDTree
-autocmd vimenter * wincmd p 
+" Open NERDTree pane ONLY if no file was specified (just type vim)
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Automatically close vim if NERDTree is the only window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
