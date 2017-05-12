@@ -46,3 +46,6 @@
 [submodule ".tmux/plugins/tmux-battery"]
 	path = .tmux/plugins/tmux-battery
 	url = https://github.com/tmux-plugins/tmux-battery
+[submodule ".tmux/plugins/tmux-imessage"]
+	path = .tmux/plugins/tmux-imessage
+	url = https://github.com/robhurring/tmux-imessage
