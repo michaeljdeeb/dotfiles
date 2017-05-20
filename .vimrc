@@ -49,6 +49,10 @@ set wrap                        " Wrap lines longer than the window
 set linebreak                   " Wrap lines in sensible places
 set breakindent                 " Indent wrapped lines to match the beginning of the line
 set splitbelow                  " Helps preview window be placed below current window
+set spelllang=en                " Use English to spell check words
+" Use custom spell file to add words vim doesn't have
+set spellfile=$HOME/.vim/spell/en.utf-8.add
+set spell                       " Enable spell check at runtime
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme & Color Depth
@@ -68,7 +72,7 @@ let &colorcolumn=join(range(101,999),",")
 "   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 "   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " endif
-" set t_ut=                       " Disable BCE for tmux
+set t_ut=                       " Disable BCE for tmux
 let g:solarized_termcolors=16
 let g:solarized_contrast='high'
 set background=dark
@@ -91,6 +95,7 @@ let g:ale_sign_warning = '⚠'                  " Custom warning sign
 " Only lint using eslint
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ycm_autoclose_preview_window_after_completion = 1 " Close preview window when not in use
+let g:vimwiki_list = [{'path': '$HOME/Developer/wiki', 'syntax': 'markdown', 'ext': '.md'}] " Set a location for the wiki and use markdown syntax 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Remappings
@@ -135,3 +140,17 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Automatically close vim if NERDTree is the only window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Prepopulate vimwiki diary with questions each day
+autocmd BufNewFile */diary/????-??-??.md call s:new_vimwiki_diary_template()
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Custom Functions
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Prepopulate vimwiki diary with questions each day
+function s:new_vimwiki_diary_template()
+  " load template
+  read $HOME/Developer/wiki/templates/diary.md | execute "normal ggdd"
+  " Replace h1 with today's date
+  %substitute#\[:VIM_EVAL:\]\(.\{-\}\)\[:END_EVAL:\]#\=eval(submatch(1))#ge
+endfunction

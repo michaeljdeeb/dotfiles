@@ -49,3 +49,9 @@
 [submodule ".tmux/plugins/tmux-imessage"]
 	path = .tmux/plugins/tmux-imessage
 	url = https://github.com/robhurring/tmux-imessage
+[submodule ".vim/bundle/vim-jsx"]
+	path = .vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx
+[submodule ".vim/bundle/vimwiki"]
+	path = .vim/bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki
