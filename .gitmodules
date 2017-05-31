@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/vimwiki"]
 	path = .vim/bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki
+[submodule ".vim/bundle/vim-bufkill"]
+	path = .vim/bundle/vim-bufkill
+	url = https://github.com/qpkorr/vim-bufkill

@@ -666,19 +666,19 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>340 529 557 143 0 0 1680 1027 </string>
+	<string>340 444 557 94 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 488 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>318 72 606 456 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>64 407 918 381 0 0 1680 1050 </string>
+	<string>506 257 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>120 549 710 402 0 0 1680 1027 </string>
+	<string>2 58 1676 963 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>122 465 710 402 0 0 1680 1027 </string>
+	<string>-823 257 710 402 -3440 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>806 248 710 402 0 0 1680 1027 </string>
+	<string>-1172 403 710 402 -3440 0 3440 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -938,7 +938,7 @@
 			<key>Guid</key>
 			<string>8FC8B151-F98A-4DDF-882C-B4C8E821D4A0</string>
 			<key>Horizontal Spacing</key>
-			<real>0.90000000000000002</real>
+			<real>1</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -1329,7 +1329,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>12486CB8-61A3-4994-B713-9244622CA6DC</string>
 	<key>NoSyncLastTipTime</key>
-	<real>516225909.77873498</real>
+	<real>516967962.040362</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1401,6 +1401,12 @@
 		<string>0057</string>
 		<string>0058</string>
 		<string>0059</string>
+		<string>0060</string>
+		<string>0061</string>
+		<string>0062</string>
+		<string>0063</string>
+		<string>0064</string>
+		<string>0065</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -1446,7 +1452,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-11T23:38:52Z</date>
+	<date>2017-05-19T23:11:33Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
