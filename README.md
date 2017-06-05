@@ -1,5 +1,7 @@
 # dotfiles
 
+I use these exclusively on the latest version of macOS and don't pull them down enough to verify that they can be cloned without issues arising.
+
 ### How to start tracking dotfiles
 ```bash
 git init --bare $HOME/.dotfiles
@@ -38,7 +40,17 @@ dotfiles pull
 
 ### Updating all submodules
 ```bash
-dofiles submodule update --recursive --remote
+dotfiles submodule update --recursive --remote
+```
+
+#### Updating YouCompleteMe
+
+For some reason, the above command does not properly update YouCompleteMe and the following additional steps must be done.
+
+```bash
+cd ~/.vim/bundle/YouCompleteMe/
+git submodule update --init --recursive
+./install.py --tern-completer
 ```
 
 ### Remove a submodule
