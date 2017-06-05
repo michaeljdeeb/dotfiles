@@ -61,7 +61,7 @@ syntax enable                   " Syntax highlighting
 set cursorline                  " Highlights current line
 " Highlight the 100th & up character of the line
 let &colorcolumn=join(range(101,999),",") 
-" set t_Co=256                    " Enable 256-color depth
+set t_Co=256                    " Enable 256-color depth
 
 " Enables 24-bit color depth (requires compatible terminal/vim 8+)
 " if (has("termguicolors"))
@@ -90,8 +90,9 @@ let g:NERDTreeShowIgnoredStatus = 1           " Mark .gitignore files as such (m
 let g:NERDCustomDelimiters = {'javascript': {'left': '//', 'leftAlt': '/**', 'rightAlt': '*/'}} 
 let g:NERDSpaceDelims = 1                     " One space before comment per Airbnb style guide
 let g:ale_sign_column_always = 1              " Keep sign gutter always open
-let g:ale_sign_error = '⨉'                    " Custom error sign
-let g:ale_sign_warning = '⚠'                  " Custom warning sign
+" tmux doesn't like these symbols so let's not use them
+" let g:ale_sign_error = '✖︎'                    " Custom error sign
+" let g:ale_sign_warning = '⚠︎'                  " Custom warning sign
 " Only lint using eslint
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ycm_autoclose_preview_window_after_completion = 1 " Close preview window when not in use
@@ -134,12 +135,12 @@ vmap // <Leader>cs
 " Auto-Commands
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Save files when vim loses focus (this might not work with tmux)
-autocmd FocusLost * :wa    
+" autocmd FocusLost * :wa
 " Open NERDTree pane ONLY if no file was specified (just type vim)
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Automatically close vim if NERDTree is the only window open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Prepopulate vimwiki diary with questions each day
 autocmd BufNewFile */diary/????-??-??.md call s:new_vimwiki_diary_template()
 
