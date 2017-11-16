@@ -1,48 +1,51 @@
 [submodule "vim/.vim/bundle/vim-pathogen"]
 	path = vim/.vim/bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
+	url = https://github.com/tpope/vim-pathogen
 [submodule "vim/.vim/bundle/nerdtree"]
 	path = vim/.vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/.vim/bundle/vim-fugitive"]
 	path = vim/.vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/.vim/bundle/vim-airline"]
 	path = vim/.vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
 [submodule "vim/.vim/bundle/vim-airline-themes"]
 	path = vim/.vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "vim/.vim/bundle/tmux.vim"]
 	path = vim/.vim/bundle/tmux.vim
-	url = https://github.com/keith/tmux.vim
+	url = https://github.com/keith/tmux.vim.git
 [submodule "vim/.vim/bundle/ale"]
 	path = vim/.vim/bundle/ale
-	url = https://github.com/w0rp/ale
+	url = https://github.com/w0rp/ale.git
 [submodule "vim/.vim/bundle/vim-javascript"]
 	path = vim/.vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
 [submodule "vim/.vim/bundle/YouCompleteMe"]
 	path = vim/.vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "vim/.vim/bundle/vim-colors-solarized"]
 	path = vim/.vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
 [submodule "vim/.vim/bundle/nerdcommenter"]
 	path = vim/.vim/bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "vim/.vim/bundle/nerdtree-git-plugin"]
 	path = vim/.vim/bundle/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
 [submodule "vim/.vim/bundle/vim-obsession"]
 	path = vim/.vim/bundle/vim-obsession
 	url = https://github.com/tpope/vim-obsession
 [submodule "vim/.vim/bundle/vim-jsx"]
 	path = vim/.vim/bundle/vim-jsx
-	url = https://github.com/mxw/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
 [submodule "vim/.vim/bundle/vimwiki"]
 	path = vim/.vim/bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki
 [submodule "vim/.vim/bundle/vim-bufkill"]
 	path = vim/.vim/bundle/vim-bufkill
-	url = https://github.com/qpkorr/vim-bufkill
+	url = https://github.com/qpkorr/vim-bufkill.git
+[submodule "vim/.vim/bundle/wal.vim"]
+	path = vim/.vim/bundle/wal.vim
+	url = https://github.com/dylanaraps/wal.vim
