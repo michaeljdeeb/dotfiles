@@ -57,11 +57,12 @@ set spell                       " Enable spell check at runtime
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme & Color Depth
 """"""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme wal			" Colorscheme changes based on pywal
 syntax enable                   " Syntax highlighting
 set cursorline                  " Highlights current line
 " Highlight the 100th & up character of the line
 let &colorcolumn=join(range(101,999),",") 
-set t_Co=256                    " Enable 256-color depth
+"set t_Co=256                    " Enable 256-color depth
 
 " Enables 24-bit color depth (requires compatible terminal/vim 8+)
 " if (has("termguicolors"))
@@ -72,7 +73,7 @@ set t_Co=256                    " Enable 256-color depth
 "   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 "   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " endif
-set t_ut=                       " Disable BCE for tmux
+"set t_ut=                       " Disable BCE for tmux
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Plug-in Configurations
