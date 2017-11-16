@@ -1,60 +1,48 @@
-[submodule ".vim/bundle/vim-pathogen"]
-	path = .vim/bundle/vim-pathogen
+[submodule "vim/.vim/bundle/vim-pathogen"]
+	path = vim/.vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+[submodule "vim/.vim/bundle/nerdtree"]
+	path = vim/.vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
+[submodule "vim/.vim/bundle/vim-fugitive"]
+	path = vim/.vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
+[submodule "vim/.vim/bundle/vim-airline"]
+	path = vim/.vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
-[submodule ".vim/bundle/vim-airline-themes"]
-	path = .vim/bundle/vim-airline-themes
+[submodule "vim/.vim/bundle/vim-airline-themes"]
+	path = vim/.vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
-[submodule ".vim/bundle/tmux.vim"]
-	path = .vim/bundle/tmux.vim
+[submodule "vim/.vim/bundle/tmux.vim"]
+	path = vim/.vim/bundle/tmux.vim
 	url = https://github.com/keith/tmux.vim
-[submodule ".vim/bundle/ale"]
-	path = .vim/bundle/ale
+[submodule "vim/.vim/bundle/ale"]
+	path = vim/.vim/bundle/ale
 	url = https://github.com/w0rp/ale
-[submodule ".vim/bundle/vim-javascript"]
-	path = .vim/bundle/vim-javascript
+[submodule "vim/.vim/bundle/vim-javascript"]
+	path = vim/.vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
-[submodule ".vim/bundle/YouCompleteMe"]
-	path = .vim/bundle/YouCompleteMe
+[submodule "vim/.vim/bundle/YouCompleteMe"]
+	path = vim/.vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe
-[submodule ".vim/bundle/vim-colors-solarized"]
-	path = .vim/bundle/vim-colors-solarized
+[submodule "vim/.vim/bundle/vim-colors-solarized"]
+	path = vim/.vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
-[submodule ".vim/bundle/nerdcommenter"]
-	path = .vim/bundle/nerdcommenter
+[submodule "vim/.vim/bundle/nerdcommenter"]
+	path = vim/.vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
-[submodule ".vim/bundle/nerdtree-git-plugin"]
-	path = .vim/bundle/nerdtree-git-plugin
+[submodule "vim/.vim/bundle/nerdtree-git-plugin"]
+	path = vim/.vim/bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin
-[submodule ".tmux/plugins/tmux-resurrect"]
-	path = .tmux/plugins/tmux-resurrect
-	url = https://github.com/tmux-plugins/tmux-resurrect
-[submodule ".vim/bundle/vim-obsession"]
-	path = .vim/bundle/vim-obsession
+[submodule "vim/.vim/bundle/vim-obsession"]
+	path = vim/.vim/bundle/vim-obsession
 	url = https://github.com/tpope/vim-obsession
-[submodule ".tmux/plugins/tmux-continuum"]
-	path = .tmux/plugins/tmux-continuum
-	url = https://github.com/tmux-plugins/tmux-continuum
-[submodule ".tmux/plugins/tmux-battery"]
-	path = .tmux/plugins/tmux-battery
-	url = https://github.com/tmux-plugins/tmux-battery
-[submodule ".tmux/plugins/tmux-imessage"]
-	path = .tmux/plugins/tmux-imessage
-	url = https://github.com/robhurring/tmux-imessage
-[submodule ".vim/bundle/vim-jsx"]
-	path = .vim/bundle/vim-jsx
+[submodule "vim/.vim/bundle/vim-jsx"]
+	path = vim/.vim/bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx
-[submodule ".vim/bundle/vimwiki"]
-	path = .vim/bundle/vimwiki
+[submodule "vim/.vim/bundle/vimwiki"]
+	path = vim/.vim/bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki
-[submodule ".vim/bundle/vim-bufkill"]
-	path = .vim/bundle/vim-bufkill
+[submodule "vim/.vim/bundle/vim-bufkill"]
+	path = vim/.vim/bundle/vim-bufkill
 	url = https://github.com/qpkorr/vim-bufkill

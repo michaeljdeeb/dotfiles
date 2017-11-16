@@ -73,10 +73,6 @@ set t_Co=256                    " Enable 256-color depth
 "   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " endif
 set t_ut=                       " Disable BCE for tmux
-let g:solarized_termcolors=16
-let g:solarized_contrast='high'
-set background=dark
-colorscheme solarized
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Plug-in Configurations
