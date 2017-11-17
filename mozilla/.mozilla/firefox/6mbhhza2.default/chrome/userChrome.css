@@ -1,0 +1,28 @@
+@import url('file:///home/m/.cache/wal/colors.css');
+@namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul');
+
+:root {
+  --tab-line-color: var(--color2) !important;
+}
+
+#navigator-toolbox {
+  background: var(--color0) !important;
+  color: var(--color7) !important;
+}
+
+.tab-background[selected='true'] {
+  background: var(--color1) !important;
+}
+
+label.tab-label {
+  color: var(--color7) !important;
+}
+
+#nav-bar {
+  background: var(--color0) !important;
+  color: var(--color7) !important;
+}
+
+toolbarbutton {
+  color: var(--color6) !important;
+}

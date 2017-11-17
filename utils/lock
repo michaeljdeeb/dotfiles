@@ -1,6 +1,6 @@
 #!/bin/bash
 scrot /tmp/lockscreen.png
 convert /tmp/lockscreen.png -resize 400x225 /tmp/lockscreen.png
-convert /tmp/lockscreen.png -blur 12x8 /tmp/lockscreen.png
+convert /tmp/lockscreen.png -blur 35x15 /tmp/lockscreen.png
 convert /tmp/lockscreen.png -resize 1600x900 /tmp/lockscreen.png
 i3lock -i /tmp/lockscreen.png
