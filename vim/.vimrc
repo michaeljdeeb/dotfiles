@@ -16,6 +16,7 @@ set undofile                    " Persistent log of undos after opening/closing
 set undodir=~/.vim/.un//        " Centralize undo files (.un) // means complete path will be built here based on file location
 set directory=~/.vim/.swp//     " Centralize swap files
 set backupdir=~/.vim/.backup//  " Centralize backup files (used before overwriting)
+set backupcopy=yes              " Fixes HMR lag when using create-react-app
 set scrolloff=3                 " Show x lines above the cursor when file is scrollable
 set visualbell                  " Stops beeps for incorrect input
 set modelines=0                 " Prevents modeline security vulnerability
@@ -57,12 +58,11 @@ set spell                       " Enable spell check at runtime
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme & Color Depth
 """"""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme wal			" Colorscheme changes based on pywal
 syntax enable                   " Syntax highlighting
 set cursorline                  " Highlights current line
 " Highlight the 100th & up character of the line
 let &colorcolumn=join(range(101,999),",") 
-"set t_Co=256                    " Enable 256-color depth
+set t_Co=256                    " Enable 256-color depth
 
 " Enables 24-bit color depth (requires compatible terminal/vim 8+)
 " if (has("termguicolors"))
@@ -73,13 +73,17 @@ let &colorcolumn=join(range(101,999),",")
 "   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 "   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " endif
-"set t_ut=                       " Disable BCE for tmux
+set t_ut=                       " Disable BCE for tmux
+let g:solarized_termcolors=16
+let g:solarized_contrast='high'
+set background=dark
+colorscheme solarized
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Plug-in Configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_powerline_fonts = 1             " Tell airline to use powerline symbols
-let g:airline#extensions#branch#enabled = 1   " Show git branch in airline
+" let g:airline_powerline_fonts = 1             " Tell airline to use powerline symbols
+" let g:airline#extensions#branch#enabled = 1   " Show git branch in airline
 let NERDTreeShowHidden = 1                    " Show hidden files in NERDTree
 let NERDTreeMinimalUI = 1                     " Remove Press ? for help in NERDTree
 let g:NERDTreeShowIgnoredStatus = 1           " Mark .gitignore files as such (may slowdown vim?)
@@ -94,6 +98,7 @@ let g:ale_sign_column_always = 1              " Keep sign gutter always open
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ycm_autoclose_preview_window_after_completion = 1 " Close preview window when not in use
 let g:vimwiki_list = [{'path': '$HOME/Developer/wiki', 'syntax': 'markdown', 'ext': '.md'}] " Set a location for the wiki and use markdown syntax 
+let g:jsx_ext_required = 0                    " Enable JSX highlighting in .js files
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Remappings
